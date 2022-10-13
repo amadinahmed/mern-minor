@@ -23,4 +23,4 @@ app.post("/extract-text", (req, res) => {
     });
 });
 
-app.listen(5000,() => {console.log("Server port : 5000")})
+app.listen(6000,() => {console.log("Server port : 5000")})
