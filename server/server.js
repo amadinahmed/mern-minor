@@ -4,10 +4,16 @@ const fileUpload = require("express-fileupload");
 
 const app = express();
 
+const path = require('path')
+
+const PORT = process.env.PORT || 5000
+
 
 app.get("/api",(req,res) =>{
     res.json({"users":['1','2','3']})
 })
+
+app.use(express.static(path.join(__dirname + "/public")))
 
 app.use("/file", express.static("public"));
 app.use(fileUpload());
@@ -23,4 +29,4 @@ app.post("/extract-text", (req, res) => {
     });
 });
 
-app.listen(6000,() => {console.log("Server port : 5000")})
+app.listen(PORT,() => {console.log("Server port : 5000")})
