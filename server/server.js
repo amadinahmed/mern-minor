@@ -1,20 +1,22 @@
 const express = require("express");
 const pdfParse = require("pdf-parse");
 const fileUpload = require("express-fileupload");
-
 const app = express();
+const cors = require('cors');
 
-const path = require('path')
-
-const port = process.env.PORT || 3000;
-
-
+app.use(cors());
 
 app.get("/api",(req,res) =>{
     res.json({"users":['1','2','3']})
 })
 
-app.use(express.static(path.join(__dirname + "/public")))
+
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
 
 app.use("/file", express.static("public"));
 app.use(fileUpload());
@@ -24,10 +26,17 @@ app.post("/extract-text", (req, res) => {
         res.status(400);
         res.end();
     }
-
     pdfParse(req.files.pdfFile).then(result => {
         res.send(result.text);
     });
 });
 
-app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
+app.get('/python', function(req, res) {
+    const spawn = require('child_process').spawn;
+    const process = spawn('python', ['./python/sum.py', req.query.num1, req.query.num2]);
+    process.stdout.on('data', (data) => {
+        res.send(JSON.stringify({sum: data.toString()}));
+    });
+})
+
+app.listen(5000,() => {console.log("Server port : 5000")})
