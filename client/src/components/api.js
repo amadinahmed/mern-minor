@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-import cors from 'cors'
+
 
 export class api extends Component {
 
@@ -9,7 +8,8 @@ export class api extends Component {
 
       this.state = {
          userID:'',
-         title: ''
+         title: '',
+         values: 'dfada'
       }
    }
 
@@ -26,56 +26,28 @@ export class api extends Component {
 
   api_function = (e) => {
    e.preventDefault()
-   /*
-
-   var data = JSON.stringify({
-      "body": "dadda"
-    });
-    
-    var config = {
-      mode: 'no-cors',
-      method: 'POST',
-      url: 'https://zedvzzv9m0.execute-api.us-east-1.amazonaws.com/dev/',
-      headers: { 
-        'Content-Type': 'application/json'
-      },
-      data : data
-    };
-    
-    axios(config)
-    .then(function (response) {
-      console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
- */
-   
-   var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-
-   var raw = JSON.stringify({
-      "body": "feaefaeafe"
-      });
-
-   var requestOptions = {
-      mode: 'no-cors',
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-      };
-
-   fetch("https://zedvzzv9m0.execute-api.us-east-1.amazonaws.com/dev/", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-    
+       
+     
+        fetch("https://u5xhpx66ueezszicbjxmqnhipu0mkmwm.lambda-url.us-east-1.on.aws?course=['ACCTG 211', 'ACCTG 310', 'ACCTG 371', 'ACCTG 472', 'CMPSC 121']\n", {
+         // mode: 'no-cors',
+         method: 'GET',
+         headers: {
+           Accept: 'application/json',
+         },
+       },
+       ).then(response => {
+         if (response.ok) {
+           response.json().then(json => {
+             console.log(json);
+           });
+         }
+       });
   }
 
 
+
   render() {
-   const {userId, title, body} = this.state
+   const {userId, title, values} = this.state
     return (
       <div>
             <form onSubmit={this.api_function}>
@@ -97,7 +69,7 @@ export class api extends Component {
                <button type='submit'>Some</button>
                </div>
             </form>
-     
+         <p value={values}></p>
       </div>
     )
   }
