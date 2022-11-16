@@ -9,7 +9,7 @@ export class api extends Component {
       this.state = {
          userID:'',
          title: '',
-         values: 'dfada'
+         values: ''
       }
    }
 
