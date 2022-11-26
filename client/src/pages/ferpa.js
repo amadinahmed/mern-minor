@@ -1,14 +1,13 @@
 import React from "react";
   
-const Minor_tracker = () => {
+const Ferpa = () => {
   return (
     <div>
       <h1>
-      minor_tracker Page
+      Ferpa Page
       </h1>
-      
     </div>
   );
 };
   
-export default Minor_tracker;
+export default Ferpa;

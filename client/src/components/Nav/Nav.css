@@ -1,0 +1,169 @@
+.header {
+    align-items: center;
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+  }
+  
+  .navigation {
+    align-items: center;
+    border: 1px none;
+    display: flex;
+    height: 102px;
+    padding: 15px 89px;
+    width: 1440px;
+  }
+  
+  .psu-minor-tracker {
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-bottom: 12.0px;
+    min-width: 179px;
+    white-space: nowrap;
+  }
+  
+  .navigation-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 37px;
+    min-height: 24px;
+    width: 481px;
+  }
+  
+  .flex-row {
+    align-items: flex-start;
+    display: flex;
+    height: 16px;
+    min-width: 473px;
+  }
+  
+  .place {
+    letter-spacing: 0.16px;
+    line-height: 16px;
+    min-width: 49px;
+    white-space: nowrap;
+  }
+  
+  .about-us {
+    letter-spacing: 0.16px;
+    line-height: 16px;
+    margin-left: 36px;
+    min-width: 72px;
+    white-space: nowrap;
+  }
+  
+  .instructions {
+    letter-spacing: 0.16px;
+    line-height: 16px;
+    margin-left: 36px;
+    min-width: 95px;
+    white-space: nowrap;
+  }
+  
+  .ferpa-agreement {
+    letter-spacing: 0.16px;
+    line-height: 16px;
+    margin-left: 42px;
+    white-space: nowrap;
+  }
+  
+  .rectangle-719 {
+    background-color: var(--outrageous-orange);
+    border: 1px none;
+    height: 2px;
+    margin-left: 1px;
+    width: 12px;
+  }
+  
+  .overlap-group {
+    align-items: flex-start;
+    align-self: flex-end;
+    border: 1.4px solid;
+    border-color: var(--outrageous-orange);
+    border-radius: 27px;
+    display: flex;
+    gap: 6px;
+    height: 63px;
+    justify-content: flex-end;
+    margin-left: 367px;
+    min-width: 156px;
+    padding: 14.3px 28.4px;
+  }
+  
+  .run-report {
+    color: var(--outrageous-orange);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxs);
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 16px;
+    min-height: 27px;
+    text-align: center;
+    width: 74px;
+  }
+  
+  .vector {
+    align-self: center;
+    height: 15px;
+    margin-bottom: 4.8px;
+    width: 18px;
+  }
+  
+  .text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    
+    min-height: 0px;
+    width: 1110px;
+  }
+  
+  .title {
+    align-self: flex-end;
+    color: var(--mine-shaft);
+    font-family: var(--font-family-sen);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 86px;
+    margin-right: 4.0px;
+    white-space: nowrap;
+    width: 1099px;
+  }
+  
+  .hot-glue-the-wick-to {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 34px;
+    width: 952px;
+  }
+  
+  .overlap-group1 {
+    align-items: flex-start;
+    background-image: url(https://anima-uploads.s3.amazonaws.com/projects/6382951e59b6e6b278f238b4/releases/63829576bc9767061909ee54/img/rectangle-6-1@2x.svg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 105.0px;
+    padding: 33px 81px;
+  }
+  
+  .continue {
+    color: #ffffff;
+    font-family: var(--font-family-sen);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    height: 34px;
+    letter-spacing: 0;
+    line-height: 34px;
+    white-space: nowrap;
+  }
+  
+  

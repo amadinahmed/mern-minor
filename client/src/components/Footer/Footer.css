@@ -1,0 +1,66 @@
+.footer {
+    align-items: flex-start;
+    border: 1px none;
+    display: flex;
+    flex-direction: column;
+    height: 339px;
+    padding: 100px 134px;
+    width: 1440px;
+  }
+  
+  .psu-minor-tracker {
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-top: 33px;
+    white-space: nowrap;
+  }
+  
+  .flex-row {
+    align-items: flex-start;
+    display: flex;
+    gap: 181px;
+    height: 86px;
+    min-width: 895px;
+  }
+  
+  .find-out-the-classes {
+    align-self: flex-end;
+    color: #5b5f62;
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-xxs);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 26px;
+    width: 191px;
+  }
+  
+  .menu {
+    align-items: flex-start;
+    display: flex;
+    height: 18px;
+    min-width: 523px;
+  }
+  
+  .instructions {
+    letter-spacing: 0;
+    line-height: 18px;
+    min-width: 103px;
+    white-space: nowrap;
+  }
+  
+  .ferpa-agreement {
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-left: 108px;
+    min-width: 156px;
+    white-space: nowrap;
+  }
+  
+  .about-us {
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-left: 72px;
+    white-space: nowrap;
+  }
+  
+  
