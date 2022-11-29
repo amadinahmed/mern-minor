@@ -3,13 +3,15 @@ import React, { Component } from 'react'
 
 export class api extends Component {
 
+  
+
    constructor(props){
       super(props)
 
+      
+
       this.state = {
-         userID:'',
-         title: '',
-         values: ''
+         values: 'Loading ...'
       }
    }
 
@@ -26,7 +28,7 @@ export class api extends Component {
 
   api_function = (e) => {
    e.preventDefault()
-       
+   
      
         fetch("https://u5xhpx66ueezszicbjxmqnhipu0mkmwm.lambda-url.us-east-1.on.aws?course=['ACCTG 211', 'ACCTG 310', 'ACCTG 371', 'ACCTG 472', 'CMPSC 121']\n", {
          // mode: 'no-cors',
@@ -39,6 +41,9 @@ export class api extends Component {
          if (response.ok) {
            response.json().then(json => {
              console.log(json);
+             this.setState({
+              values: json
+            });
            });
          }
        });
@@ -47,29 +52,16 @@ export class api extends Component {
 
 
   render() {
-   const {userId, title, values} = this.state
+   const {values} = this.state
     return (
       <div>
             <form onSubmit={this.api_function}>
-            <div>
-                <input 
-                type='text' 
-                name ='userId' 
-                onChange={this.changeHandler}
-                value={userId}></input>
-            </div>
-            <div>
-                <input 
-                type='text' 
-                name ='title' 
-                    onChange={this.changeHandler}
-                value={title}></input>
-            </div>
+    
             <div>
                <button type='submit'>Some</button>
                </div>
             </form>
-         <p value={values}></p>
+            <p>{values}</p>
       </div>
     )
   }

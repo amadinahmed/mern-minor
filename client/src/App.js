@@ -17,6 +17,7 @@ import Header from "./components/Nav";
 import Footer from "./components/Footer";
 
 import './styles/styles.css';
+import 'tw-elements';
 
 import {
   BrowserRouter as Router,
@@ -29,7 +30,7 @@ import {
 const linkStyle = {
   margin: "1rem",
   textDecoration: "none",
-  color: 'blue'
+  color: 'Black'
 };
 
 const api = axios.create({
@@ -57,13 +58,47 @@ const Layout = () => {
 
   return (
     <div>
-      <h1>Nav</h1>
-      {/* <Header {...headerData} />  */}
+
+        {/* Navbar */}
+
+      <nav class="flex items-center justify-between flex-wrap bg-gray-100 text-gray-600 p-6">
+        <div class="flex items-center flex-shrink-0 text-black mr-6">
+          <span class="font-semibold text-xl tracking-tight"><Link to="/" style={linkStyle}>PSU Certifications and Minor Report</Link></span>
+        </div>
+        <div class="block lg:hidden">
+         
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            
+            <p class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <Link to="/about" style={linkStyle}> Team Page</Link>
+            </p>
+            <p class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <Link to="/instruction" style={linkStyle}> Instruction</Link>
+            </p>
+            <p class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            <Link to="/ferpa" style={linkStyle}> FERPA </Link>
+            </p>
+          
+          </div>
+          <div>
+
+    <div className="pt-3 ml-3">
+      <button type="button" className="inline-block px-4 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+        Run Report
+      </button>
+    </div>
+          </div>
+        </div>
+      </nav>
 
       
-      <Outlet />
-      <h1>Footer</h1>
+    {/* Page Content */}
 
+      <Outlet />
+
+    {/* Footer */}
       <Footer
             psuMinorTracker="PSU Minor Tracker"
             findOutTheClasses="Find Out the classes need to complete your Minors and Certifications"
@@ -80,13 +115,37 @@ const Layout = () => {
 
 const AppRoute = () => {
   return (
+    
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route path="about" element={<About_Page />} />
       <Route path="Instruction" element={<Instruction_Page />} />
       <Route path="Ferpa" element={<Ferpa />} />
       <Route path="Tracker" element={<Tracker />} />
-      <Route index element={<div>Default Page Content</div>} />
+      <Route index element={
+
+      <div class="container my-24 px-6 mx-auto">
+
+
+      <section class="mb-32">
+
+        <div class="relative overflow-hidden bg-no-repeat bg-cover"></div>
+
+        <div class="container mx-auto px-6 md:px-12 xl:px-32">
+          <div class="text-center text-gray-800">
+            <div class="block rounded-lg shadow-lg px-6 py-12 md:py-16 md:px-12" >
+              <h1 class="text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-12">Something Really Cool <br /><span class="text-red-600">make you click</span></h1>
+              <a class="inline-block px-7 py-3 mb-2 md:mb-0 mr-0 md:mr-2 bg-red-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-red-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 " >Get started</a>
+              <a class="inline-block px-7 py-3 text-white font-medium text-sm leading-snug bg-transparent text-red-600 font-medium text-xs leading-tight uppercase rounded hover:text-red-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      </div>
+
+      } />
     </Route>
   </Routes>
 );
@@ -168,41 +227,135 @@ function App() {
     
       <Req_api/>
       
-      <form id="form" onSubmit={handleSubmit}>
-      <textarea  id="resultText" placeholder="Your PDF text will appear here..."></textarea>
-      <input type="file" id="inpFile"></input>
-      <button type="submit" id="submit" >Upload</button>
-
-      <p id="message"></p>
       
-      </form>
 
       <div className="card-body">
                 Returned Id: {articleId}
             </div>
      
-      <button
-        type="button"
-        onClick={(e) => {
-        e.preventDefault();
-        window.location.href='http://google.com';
-        }}>
-           Click here
-          </button>
+    
 
       <Router>
       <div className="Main">
-        <Link to="/" style={linkStyle}>Home</Link>
-        <Link to="/about" style={linkStyle}>Go to About</Link>
-        <Link to="/instruction" style={linkStyle}>Go to Instruction</Link>
-        <Link to="/ferpa" style={linkStyle}>Go to Ferpa</Link>
-        <Link to="/tracker" style={linkStyle}>Go to Tracker</Link>
         <AppRoute />
       </div>
     </Router>
-       
+
+
+   
+
+    {/* Modal */}
+    <div className="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-modal="true" role="dialog">
+      <div className="modal-dialog modal-dialog-centered relative w-auto pointer-events-none">
+        <div className="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+          <div className="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+            <h5 className="text-xl font-medium leading-normal text-gray-800" id="exampleModalScrollableLabel">
+              Modal title
+            </h5>
+            <button type="button"
+              className="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div className="modal-body relative p-4">
+            <p>This is a vertically centered modal.</p>
+          </div>
+          <div
+            className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+            <button type="button"
+              className="inline-block px-6 py-2.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button"
+              className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className=" bg-slate-900/40 pt-[2%] px-[4%] modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalCenteredScrollable" aria-modal="true" role="dialog">
+      <div className=" modal-dialog modal-dialog-centered modal-dialog-scrollable relative w-auto pointer-events-none">
+        <div className="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+          <div className="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+            <h5 className="text-xl font-medium leading-normal text-gray-800" id="exampleModalCenteredScrollableLabel">
+            Upload Academic Report
+            </h5>
+            <button type="button"
+              className="pr-3 btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+              data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"  class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            </button>
+          </div>
+          <div className="modal-body relative p-4">
+
+           {/* handles user upload data */}
+
+        <div>
+          <form id="form" onSubmit={handleSubmit}>
+            <div className='pb-10 mx-4'>
+                <textarea className='
+                h-[25rem]
+                  pb-[5%]
+                  form-control
+                  block
+                  w-full
+                  px-3
+                  py-1.5
+                  text-base
+                  font-normal
+                  text-gray-700
+                  bg-white bg-clip-padding
+                  border border-solid border-gray-300
+                  rounded
+                  transition
+                  ease-in-out
+                  m-0
+                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                  '  
+                  id="resultText" placeholder="Your PDF text will appear here...">
+            </textarea>
+
+            <div
+            className="mr-2 modal-footer flex flex-shrink-0 flex-wrap items-center justify-center p-4 border-t border-gray-200 rounded-b-md ">
+           
+            <input type="file" id="inpFile"></input>
+            <button type="submit" id="submit" className="mt-4 sm-mt-0 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1">Upload</button>
+
+        
+            </div>
+            </div>
+          </form>
+          
+        </div>
+            
+        
+
+        <p>Just like that.</p>
+
+        </div>
+
+          <div
+            className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+            <button type="button"
+              className=" inline-block px-6 py-2.5 mr-3 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button"
+              className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out ml-1">
+              Continue
+            </button>
+          </div>
+
+        </div>
+      </div>
     </div>
     
+       
+    </div>
     
   )
 
