@@ -187,9 +187,39 @@ function App() {
         resultText.value = extractedText.trim();
         const pointer = "Course History";
         let pointer_val = resultText.value.search(pointer)
+        pointer_val = pointer_val + 56
         console.log(pointer_val)
         resultText.value = resultText.value.slice(pointer_val)
-        console.log(resultText.value)
+        //console.log(resultText.value)
+        var array = resultText.value.toString().split("\n");
+        //console.log(array)
+        const outputString = Object.values(array).join('\n');
+        //console.log(outputString)
+        
+        const mappedOutput = array.map(line => {
+            const splitLine = line.split(' ');
+            if (splitLine.length < 2) {
+              return '';
+            }
+            return splitLine[0] + ' ' + splitLine[1];
+          });
+          console.log(mappedOutput);
+        
+        const output = mappedOutput.map(str => {
+          const splitStr = str.split(' ');
+              if (splitStr.length < 2) {
+                return '';
+              }
+          let secondWord = splitStr[1];
+          let index = 0;
+            while (index < secondWord.length && !secondWord[index].match(/\d/)) {
+              index++;
+            }
+            secondWord = secondWord.substring(0, index + 3);
+            return `${splitStr[0]} ${secondWord}`;
+          });
+        
+        console.log(output);
     });
 
     var form = document.getElementById('form');
