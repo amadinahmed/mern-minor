@@ -6,6 +6,7 @@
     height: 339px;
     padding: 100px 134px;
     width: 1440px;
+    overflow-x: hidden;
   }
   
   .psu-minor-tracker {

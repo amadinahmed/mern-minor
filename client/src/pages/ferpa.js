@@ -29,6 +29,7 @@ const Ferpa = () => {
           Melt the wax. Put the wax into a glass measuring cup, then set the cup down in a large pot. Fill the pot with water until it is level with the wax; make sure that the water can't get inside the measuring cup. Bring the water to a boil over medium-high heat, and wait for the wax to melt, stirring it occasionally.
           
         </p>
+        
       </div>  
   );
 };
