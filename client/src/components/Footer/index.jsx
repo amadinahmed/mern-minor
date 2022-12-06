@@ -14,7 +14,7 @@ function Footer(props) {
     <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
   <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
     <div className="mr-12 hidden lg:block">
-      <span>Get connected with us: Contact Penn State Abington Computer Science Department</span>
+      <span>Get connected with us: Contact Penn State Abington Computer Science Department.</span>
     </div>
     <div className="flex justify-center">
    
@@ -36,8 +36,7 @@ function Footer(props) {
    <Link to="/" > Certifications and Minor Report</Link>
         </h6>
         <p>
-          Here you can use rows and columns to organize your footer content. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit.
+        Find Out the classes need to complete your Minors and Certifications.
         </p>
       </div>
       <div className="">
