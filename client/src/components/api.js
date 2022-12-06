@@ -14,6 +14,7 @@ export class api extends Component {
         afam_minor: '',
         crimj_minor: '',
         anth_minor: '',
+        AMST_minor: '',
         data_points: this.props.attribute,
       }
    }
@@ -127,6 +128,38 @@ export class api extends Component {
               });
             }
           });
+        fetch(`https://jonqy7psmpnch2pusn44u6xaqm0oymyq.lambda-url.us-east-1.on.aws/?course=${this.props.attribute}`, {
+            //mode: 'no-cors',
+            method: 'GET',
+            headers: {
+              Accept: 'application/json',
+            },
+          },
+          ).then(response => {
+            if (response.ok) {
+              response.json().then(data => {
+              
+                // Adding spaces in Array output
+
+                console.log(data)
+                let array1_joined = data[0].join('  ');
+            
+                data[0] = array1_joined
+
+                let array2_joined = data[1].join('  ');
+            
+                data[1] = array2_joined
+                
+                let array3_joined = data[2].join('  ');
+            
+                data[2] = array3_joined
+
+                this.setState({
+                AMST_minor: data
+              });
+              });
+            }
+          });
 
     }
   
@@ -161,6 +194,20 @@ export class api extends Component {
           
                  
             {Object.entries(this.state.anth_minor).map(([key, value]) => (
+              <tr className="border-b" key={key}>
+                <br/>
+                  <td className='text-md text-gray-900 font-medium px-6 py-4'><br/>{value}</td>
+              </tr>
+              
+          ))}     
+          </div>
+
+          <div id='AMST Minor'>
+
+            <h1 className=' pt-3 font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600' >AMST Minor</h1>
+          
+                 
+            {Object.entries(this.state.AMST_minor).map(([key, value]) => (
               <tr className="border-b" key={key}>
                 <br/>
                   <td className='text-md text-gray-900 font-medium px-6 py-4'><br/>{value}</td>

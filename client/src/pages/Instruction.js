@@ -8,28 +8,38 @@ const Instruction = () => {
         <h1 className=" text-5xl font-bold mt-0 mb-6">Instructions</h1>
         <p className="pt-10">
           
-          Hot glue the wick to the bottom of an empty 4-ounce (120-milliliter) jar. Get a wick that already has a metal tab attached to it, and place a glob of hot glue on the bottom of the tab. Quickly press the tab against the bottom of the jar.
-          
+        <p className="font-bold">User Instructions:</p>
+
+        <br/>
+
+        For the best user experience please use the following instructions:
+
+        ANY INFORMATION TAKEN FROM YOUR ACADEMIC RECORD IS NOT STORED WITHIN OUR SYSTEM
+
         <br/>
         <br/>
 
-          Place two pencils over the mouth of the jar, and balance the wick between them. You can also use pens, markers, chopsticks, or even popsicle sticks. The goal is to keep the wick upright.
-        
+        Please upload your Academic Requirements document, preferably in PDF format.
+        Upon hitting upload, the tracker will compare your academic requirements against that of any applicable minor or certificate program. It will then display your progress with any relevant programs and provide a general list of the following classes for further discussion with your advisor.
+        If you have any questions please contact your advisor for further assistance.
+
         <br/>
         <br/>
 
-          Melt the wax. Put the wax into a glass measuring cup, then set the cup down in a large pot. Fill the pot with water until it is level with the wax; make sure that the water can't get inside the measuring cup. Bring the water to a boil over medium-high heat, and wait for the wax to melt, stirring it occasionallyHot glue the wick to the bottom of an empty 4-ounce (120-milliliter) jar. Get a wick that already has a metal tab attached to it, and place a glob of hot glue on the bottom of the tab. Quickly press the tab against the bottom of the jar.
-        
+        <p className="font-bold">FERPA DISCLAIMER:</p>
+        <br/>
+        By clicking “RUN REPORT” you are consenting to:
+        The MCT parsing and utilizing your course history to compare against existing university academic programs.
+        The MCT comparing your course history to provide a recommendation for next steps.
+
+
         <br/>
         <br/>
           
-          Place two pencils over the mouth of the jar, and balance the wick between them. You can also use pens, markers, chopsticks, or even popsicle sticks. The goal is to keep the wick upright.
+
         
-        <br/>
-        <br/>
-        
-          Melt the wax. Put the wax into a glass measuring cup, then set the cup down in a large pot. Fill the pot with water until it is level with the wax; make sure that the water can't get inside the measuring cup. Bring the water to a boil over medium-high heat, and wait for the wax to melt, stirring it occasionally.
-          
+        ANY INFORMATION TAKEN FROM YOUR ACADEMIC RECORD IS NOT STORED WITHIN OUR SYSTEM
+
         </p>
       </div>  
       
