@@ -6,28 +6,32 @@ const About = () => {
         <h1 className=" text-5xl font-bold mt-0 mb-6">Team Page</h1>
         <p className="pt-10">
           
-          Hot glue the wick to the bottom of an empty 4-ounce (120-milliliter) jar. Get a wick that already has a metal tab attached to it, and place a glob of hot glue on the bottom of the tab. Quickly press the tab against the bottom of the jar.
-          
+        This product is a Penn State minor and certificate tracker. Penn State offers a wide variety of minors and certificates. Many students have taken the correct courses to qualify for a minor but are unaware and never declare their minor in LionPath. 
+
         <br/>
         <br/>
 
-          Place two pencils over the mouth of the jar, and balance the wick between them. You can also use pens, markers, chopsticks, or even popsicle sticks. The goal is to keep the wick upright.
-        
+        This web-based application allows a student to upload their academic report and informs them what minors they qualify or are close to qualifying for. This will analyze a student’s academic history and compare them to a database of potential minors. 
+
         <br/>
+        <br/>
+        
+        Team Members
+        <ul className="pl-6 list-disc">
+        <br/>
+        <li> Amadin</li>
+        <li> Parth</li>
+        <li> Andrew</li>
+        <li> Emily</li>
+       </ul>
         <br/>
 
-          Melt the wax. Put the wax into a glass measuring cup, then set the cup down in a large pot. Fill the pot with water until it is level with the wax; make sure that the water can't get inside the measuring cup. Bring the water to a boil over medium-high heat, and wait for the wax to melt, stirring it occasionallyHot glue the wick to the bottom of an empty 4-ounce (120-milliliter) jar. Get a wick that already has a metal tab attached to it, and place a glob of hot glue on the bottom of the tab. Quickly press the tab against the bottom of the jar.
-        
-        <br/>
         <br/>
           
-          Place two pencils over the mouth of the jar, and balance the wick between them. You can also use pens, markers, chopsticks, or even popsicle sticks. The goal is to keep the wick upright.
-        
-        <br/>
-        <br/>
-        
-          Melt the wax. Put the wax into a glass measuring cup, then set the cup down in a large pot. Fill the pot with water until it is level with the wax; make sure that the water can't get inside the measuring cup. Bring the water to a boil over medium-high heat, and wait for the wax to melt, stirring it occasionally.
-          
+          Github: <a target="_blank" rel="noopener noreferrer" href="https://github.com/amadinahmed/mern-minor">https://github.com/amadinahmed/mern-minor</a>
+          <br/>
+          Deployment and Installation: <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Deployment-and-Installation-Plan-56b739efd42f4458ab099fdaea6f8a6c">https://www.notion.so/Deployment-and-Installation-Plan-56b739efd42f4458ab099fdaea6f8a6c</a>
+
         </p>
       </div>  
   );
